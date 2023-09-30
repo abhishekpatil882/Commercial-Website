@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <title>Chitrai Industries</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="CI Logo1.png" alt="chitraiindustries">
+        </div>
+
+        <ul>
+            <li class="item"><a href="index.html">Home</a></li>
+            <li class="item"><a href="services.html">Services</a></li>
+            <li class="item"><a href="aboutus.html">About us</a></li>
+            <li class="item"><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">&nbsp; Contact Us &nbsp; </h1>
+    </section>
+<!-- contact us -->
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479860.9379653914!2d74.83776341502075!3d20.012141542683995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba3320fc200e9%3A0x30f43103038ca272!2sChitrai%20powder%20coating!5e0!3m2!1sen!2sin!4v1668101057081!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+               <i class="fa fa-home"></i>
+                <span>
+                    <h5>Propriter:- N.D.Patil</h5>
+                    <p>B.E(Mech)</p>
+                 </span>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                 <span>
+                     <h5>Contact No:- 8888890704
+                                      <br> 9422213127 </h5>
+                     
+                  </span>
+             </div>
+             <div>
+                <i class="fa fa-envelope-o"></i>
+                 <span>
+                     <h5>chitraicoating@rediffmail.com</h5>
+                     <p>Email for any query</p>
+                  </span>
+             </div>
+             <div>
+                <i class="fa fa-address"></i>
+                 <span>
+                     <h5>Plot No. E-46/1/24,Swayam Siddhi Mahila co-op. Industrial Society</h5>
+                     <p>Chikalthana, MIDC, Chhatrapati Sambhajinagar</p>
+                  </span>
+             </div>         
+        </div>
+        <div class="contact-col">
+            <form onsubmit="SendEmail(); reset(); return false">
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="email" id="email" placeholder="Enter Email address" required>
+                <input type="text" id="subject" placeholder="Enter your subject" required>
+                <textarea rows="8" id="message" placeholder="Message" required></textarea>
+                <input type="submit" value="Send message" class="hero--btn"></input>
+            </form>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function SendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "patilabhishekn@gmail.com",
+                    Password : "Abhishek@123",
+                    To : 'patilabhishekn@gmail.com',
+                    From : document.getElementById("emali").value,
+                    Subject : "New Contact Form Enquiry",
+                    Body : "And this is the body"
+                }).then(
+                message => alert(message)
+                );
+            }     
+        </div>
+        
+        </script>
+    </div>
+    
+</section>
+
+</body>
+
+
